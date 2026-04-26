@@ -13,7 +13,9 @@ app.get("/", (req, res) => {
 
 app.use("/api", metricsRoutes);
 
-const PORT = 5000;
+// ✅ FIX HERE
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

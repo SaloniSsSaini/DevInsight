@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api";
-
+const BASE_URL = "https://devinsight-ab9t.onrender.com/api";
 export const fetchData = async (developerId) => {
   const res = await axios.get(`${BASE_URL}/metrics/${developerId}`);
   return res.data;
